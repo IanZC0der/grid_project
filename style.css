@@ -69,3 +69,37 @@ p {
     background: var(--primary-color);
 }
 
+/* main-navbar */
+.main-navbar {
+    background: var(--dark-grey);
+    text-transform: capitalize;
+    padding: 0 2rem;
+}
+
+.main-navbar li {
+    list-style: none;
+}
+
+.main-navbar a {
+    font-weight: 400;
+    display: block;
+    color: var(--primary-color);
+    padding: 1rem 0;
+    letter-spacing: var(--main-spacing);
+    transition: var(--main-transition);
+}
+
+.main-navbar a:hover {
+    color: var(--main-black);
+}
+
+@media screen and (min-width:992px) {
+    .main-navbar ul{
+        max-width: 1170px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        justify-items: center;
+    }
+    
+}
