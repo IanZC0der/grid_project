@@ -103,3 +103,30 @@ p {
     }
     
 }
+
+/* hero.html */
+
+.hero-header {
+    min-height: 100vh;
+    background: var(--primary-color);
+    color: var(--main-white);
+    display: grid;
+    align-items: center;
+    justify-items: center;
+}
+
+.hero-banner {
+    padding: 0 1rem;
+}
+
+.hero-banner p{
+    max-width: 560px;
+    width: 80%;
+    font-size: 1rem;
+}
+
+@media screen and (min-width: 768px) {
+    .hero-header {
+        background: linear-gradient(rgba(241, 80, 37, 0.75), rgba(0,0,0,0.75)),url('./images/image-2.jpeg') center/cover fixed no-repeat;
+    }
+}
