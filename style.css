@@ -130,3 +130,37 @@ p {
         background: linear-gradient(rgba(241, 80, 37, 0.75), rgba(0,0,0,0.75)),url('./images/image-2.jpeg') center/cover fixed no-repeat;
     }
 }
+
+/* cards.html */
+
+.cards {
+    display: grid;
+    justify-items: center;
+    margin: 3rem 0;
+}
+
+.card {
+    margin-bottom: 2rem;
+    border: 2px solid var(--dark-grey);
+}
+
+.cards-center {
+    padding: 0 4rem;
+}
+
+.card-info {
+    padding: 1rem 1rem;
+    display: grid;
+}
+
+.card-footer {
+    background: var(--dark-grey);
+    padding: 0.5rem 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+}
+.card-footer i{
+    display: inline-block;
+    color: var(--primary-color);
+}
