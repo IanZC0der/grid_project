@@ -227,6 +227,7 @@ p {
 
     .tiles img {
         height: 100%;
+        object-fit: cover;
     }
 
     .tile-1 {
@@ -256,4 +257,116 @@ p {
     .tile-9 {
         grid-area: i;
     }
+}
+
+/* layout.html */
+
+.header {
+    text-align: center;
+    color: var(--main-white);
+    background: var(--primary-color);
+    padding: 1rem 0;
+}
+
+.sidebar {
+    background: var(--primary-color);
+    color: var(--main-white);
+    padding: 1rem 0;
+    font-size: 1rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+}
+
+.footer {
+    padding: 1rem 0;
+    color: var(--main-white);
+    background: var(--main-black);
+    font-size: large;
+    text-align: center;
+}
+.footer p {
+    font-size: 1rem;
+}
+
+.navbar li {
+    list-style-type: none;
+}
+.navbar {
+    background: var(--dark-grey);
+}
+
+.navbar a {
+    display: inline-block;
+    color: var(--main-black);
+    letter-spacing: var(--main-spacing);
+    text-transform: capitalize;
+    font-size: 1.3rem;
+    transition: var(--main-transition);
+    padding: 1rem;
+}
+
+.navbar a:hover{
+    color: var(--main-white);
+}
+
+.section {
+    padding: 1.5rem;
+}
+
+.section p {
+    font-size: 1rem;
+}
+.main {
+    height: 100vh;
+    display: grid;
+    grid-template-rows: auto auto 1fr auto auto; 
+}
+
+@media screen and (min-width: 768px) {
+    .navbar ul{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        justify-items: center;
+    }
+}
+
+@media screen and (min-width:900px) {
+    .main {
+        grid-template-rows: auto 1fr auto;
+        grid-template-columns: auto 1fr auto;
+        grid-template-areas: 
+        "a a a"
+        "b c d"
+        "e e e";
+    }
+    .header {
+        grid-area: a;
+    }
+
+    .navbar {
+        grid-area: b;
+    }
+    .navbar ul {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 1fr);
+        min-height: 100%;
+        /* the above line fixed the issue that the ul was not centered */
+    }
+    .section {
+        grid-area: c;
+    }
+    .sidebar {
+        grid-area: d;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 1fr);
+        background: var(--dark-grey);
+        padding: 1rem;
+        align-items: center;
+
+    }
+    .footer {
+        grid-area: e;
+    }
+
 }
